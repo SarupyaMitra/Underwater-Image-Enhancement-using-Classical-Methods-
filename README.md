@@ -44,6 +44,7 @@ I have implemented 4 different classical models from scratch:
  	Since red wavelengths are first absorbed, underwater images usually suffer from significant red channel attenuation.
 
 
+
 To compensate for this effect, red channel is enhanced by:
 
 a) Computing the mean chromatic values of red, green and blue channels. Let them be r', g', b'.
@@ -51,13 +52,13 @@ a) Computing the mean chromatic values of red, green and blue channels. Let them
 b) To determine whether red channel compensation is needed, the following ratios are evaluated: g'/r' and b'/r'. If either of these ratio exceeds 1.3, red channel compensation is applied.
 
 c) In perfectly balanced image, the expected chromatic mean of each channel is approximately 1/3. The red deficit is computed as:
-        deficit = 1/3 - r'
+deficit = 1/3 - r'
 The corresponding gain factor is then defined as:
-        gain = deficit / (1/3)
+gain = deficit / (1/3)
 d) For each pixel, the chromatic red component is adjusted using the following transformation:
-        r_new(x,y) = r(x,y) + gain\*r(x,y)\*(1-r(x,y))
+r\_new(x,y) = r(x,y) + gain\*r(x,y)\*(1-r(x,y))
 The final compensated red channel is reconstructed as:
-        R_new(x,y) = (R(x,y) + G(x,y) +  B(x,y))\*r_new(x,y)
+R\_new(x,y) = (R(x,y) + G(x,y) +  B(x,y))\*r\_new(x,y)
 
 
 
@@ -65,7 +66,7 @@ The final compensated red channel is reconstructed as:
 
  	This model also tries to solve the Red channel problem, but in a different way. While computation of the standard dark channel we basically go to each spatial location(say, (x,y)) and set its value to minimum(R(x,y),G(x,y),B(x,y)) where C(x,y) denotes the channel value at location (x,y).
 
-But since the Red channel values are typically low in underwater images, the dark channel is mostly dominated by the red channel values introducing a bias. 
+But since the Red channel values are typically low in underwater images, the dark channel is mostly dominated by the red channel values introducing a bias.
 
 To mitigate the issue, the dark channel is computed only using Green and Blue channels: minimum(G(x,y),B(x,y)).
 
@@ -78,4 +79,16 @@ This modification reduces the bias creted by the red channel and leads to improv
 ##### References:
 
 \[1] : K. He, J. Sun and X. Tang, "Single Image Haze Removal Using Dark Channel Prior," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 33, no. 12, pp. 2341-2353, Dec. 2011.
+
+
+
+
+
+##### How to Run the code
+
+1\. Download the UIEB dataset
+
+2\. Place it inside the src/data folder
+
+3\. Run Compare.py to get the numerical results of every model
 

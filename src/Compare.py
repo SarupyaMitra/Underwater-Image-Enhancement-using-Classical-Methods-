@@ -151,21 +151,10 @@ if __name__=="__main__":
     raw_imgs,ref_imgs = get_whole_dataset() 
     # print(f"Raw Images shape: {raw_imgs.shape}")
     # print(f"Reference Images shape: {ref_imgs.shape}")
-    # show_ops(1,raw_imgs,ref_imgs)
-    # show_ops(2,raw_imgs,ref_imgs)
+    show_ops(1,raw_imgs,ref_imgs)
+    show_ops(2,raw_imgs,ref_imgs)
     show_ops(3,raw_imgs,ref_imgs)
-    #show_ops(4,raw_imgs,ref_imgs)
-
-
-
-    # # Gabor Filter Bank Visualisation (Continuously press "enter" key to see all the filters)
-    # for i in range(10):
-    #     input_img = raw_imgs[i]
-    #     my_op = CLAHE_outputs[i]
-    #     ref_op = ref_imgs[i]
-    #     combined_img = np.hstack((input_img,my_op,ref_op))
-    #     cv2.imshow("Combined",combined_img)
-    #     cv2.waitKey(0)
+    show_ops(4,raw_imgs,ref_imgs)
 
 
 
