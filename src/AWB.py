@@ -6,6 +6,7 @@ raw_imgs,ref_imgs = get_mini_dataset()
 #print(raw_imgs.shape)
 
 def perform_gray_world(img):
+    'Performs gray world AWB on a single image'
     op_img = np.zeros_like(img)
     R_channel = img[:,:,0]
     G_channel = img[:,:,1]
@@ -29,9 +30,8 @@ def perform_gray_world(img):
 
     return op_img
 
-
-
 def gray_world_AWB(raw_imgs):
+    'Performs gray world AWB on a list of images'
     outputs = []
     for i in range(len(raw_imgs)):
         img = raw_imgs[i]
@@ -40,6 +40,7 @@ def gray_world_AWB(raw_imgs):
     return np.array(outputs)
 
 def perform_max_RGB(img):
+    'Performs max-RGB AWB on a single image'
     op_img = np.zeros_like(img)
     R_channel = img[:,:,0]
     G_channel = img[:,:,1]
@@ -62,6 +63,7 @@ def perform_max_RGB(img):
     return op_img
 
 def max_RGB_AWB(raw_imgs):
+    'Performs max-RGB AWB on a list of images'
     outputs = []
     for i in range(len(raw_imgs)):
         img = raw_imgs[i]
@@ -74,6 +76,7 @@ def max_RGB_AWB(raw_imgs):
 
 
 if __name__ == '__main__':
+    'Just to visualise raw and reference images'
     outputs = max_RGB_AWB(raw_imgs)
     figcounter = 0
     column_headers = ['Raw','Reference','Output']
