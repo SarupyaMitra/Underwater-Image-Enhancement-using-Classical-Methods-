@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 from skimage.metrics import peak_signal_noise_ratio as psnr,structural_similarity as ssim
-from AWB import max_RGB_AWB,perform_max_RGB
+from AWB import perform_max_RGB
 from CLAHE import CLAHE_pipeline
 from Dataset_Creation import get_whole_dataset,get_mini_dataset
 from Min_GB_DCP import get_scene_radiance_GB
