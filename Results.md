@@ -13,9 +13,7 @@ The Mean UIQM of raw images in the dataset is 0.9856293082993665
 
 1. ##### **Automatic White Balancing(max RGB) + Contrast Limited Adaptive Histogram Equalization:**
 
-    For CLAHE, the image was broken into 4\*4 non-overlapping blocks each blocks having 64\*64 pixels. The results:
-
-
+&nbsp;    For CLAHE, the image was broken into 4\*4 non-overlapping blocks each blocks having 64\*64 pixels. The results:
 
 &nbsp;		Mean PSNR: 14.491193873872154
 
@@ -32,13 +30,7 @@ The Mean UIQM of raw images in the dataset is 0.9856293082993665
 &nbsp;		Std UIQM of output: 0.4448216635136627
 
 
-
-
-
 ##### 2\. Basic Dark Channel Prior(DCP):
-
-The results are:
-
 
 
 &nbsp;	Mean PSNR: 6.0638328780235975
@@ -59,10 +51,6 @@ The results are:
 
 ##### 3\. Red channel compensated DCP:
 
-The results are:
-
-
-
 &nbsp;	Mean PSNR: 6.061178886068516
 
 &nbsp;	Std PSNR: 1.135729736348809
@@ -71,8 +59,6 @@ The results are:
 
 &nbsp;	Std SSIM: 0.022863174303680886
 
-
-
 &nbsp;	Mean UIQM of output: 1.393124910810237
 
 &nbsp;	Std UIQM of output: 0.5463559640663779
@@ -80,9 +66,6 @@ The results are:
 
 
 ##### 4\. Min Green-Blue DCP: 
-
-The results are:
-
 
 
 &nbsp;	Mean PSNR: 6.059335138146466
@@ -107,3 +90,9 @@ In terms of UIQM, all enhancement methods improve the UIQM score compared to the
 AWB+CLAHE model achieved highest UIQM, which indicates strong improvements in contrast and color balance.
 
 Among the Dark Channel Prior based methods, the Min Green-Blue DCP produces a higher UIQM score compared to basic DCP variants, suggesting that removing the red channel bias imporves perceptual quality.
+
+#### Few Sample Outputs:
+![First sample](Images/1.png)
+![Second Sample](Images/2.png)
+![Third Sample](Images/3.png)
+![Fourth Sample](Images/4.png)

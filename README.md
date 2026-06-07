@@ -1,4 +1,4 @@
-##### Dataset Used:
+#### Dataset Used:
 
 The experiments were conducted on the UIEB(Underwater Image Enhancement Benchmark) Dataset. Dataset Link :- https://li-chongyi.github.io/proj\_benchmark.html
 
@@ -6,13 +6,13 @@ Each image was reshaped to 256\*256 pixels before processing.
 
 
 
-###### Important Observation:
+##### Important Observation:
 
 Red Colour is absorbed rapidly underwater and typically within 5-10 meters, most of the red wavelength components are significantly attenuated.
 
 
 
-##### Implemented Models:
+#### Implemented Models:
 
 I have implemented 4 different classical models from scratch:
 
@@ -25,21 +25,21 @@ I have implemented 4 different classical models from scratch:
 
 
 
-##### Model Descriptions:
+#### Model Descriptions:
 
-###### A) Max RGB AWB + CLAHE Model:
+##### A) Max RGB AWB + CLAHE Model:
 
  	In this model, Max-RGB Automatic White Balancing was applied to the input raw image and then applied CLAHE. For CLAHE processing, the RGB image was converted to LAB space and CLAHE was applied to the L-channel only. The L-channel was divided into 4\*4 non-overlapping blocks, each block having 64\*64 pixels.
 
 
 
-###### B) Basic DCP:
+##### B) Basic DCP:
 
  	This model applies the Dark Channel Prior(DCP) based dehazing algorithm described in \[1]. The reason for this model is that underwater environments behave similarly to hazy or foggy atmospheres, as water acts as a scattering medium.
 
 
 
-###### C) Red Channel Compensated DCP:
+##### C) Red Channel Compensated DCP:
 
  	Since red wavelengths are first absorbed, underwater images usually suffer from significant red channel attenuation.
 
@@ -62,7 +62,7 @@ R\_new(x,y) = (R(x,y) + G(x,y) +  B(x,y))\*r\_new(x,y)
 
 
 
-###### D) Min Green-Blue DCP:
+##### D) Min Green-Blue DCP:
 
  	This model also tries to solve the Red channel problem, but in a different way. While computation of the standard dark channel we basically go to each spatial location(say, (x,y)) and set its value to minimum(R(x,y),G(x,y),B(x,y)) where C(x,y) denotes the channel value at location (x,y).
 
@@ -76,7 +76,7 @@ This modification reduces the bias creted by the red channel and leads to improv
 
 
 
-##### References:
+#### References:
 
 \[1] : K. He, J. Sun and X. Tang, "Single Image Haze Removal Using Dark Channel Prior," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 33, no. 12, pp. 2341-2353, Dec. 2011.
 
@@ -84,11 +84,13 @@ This modification reduces the bias creted by the red channel and leads to improv
 
 
 
-##### How to Run the code
+#### How to Run the code:
 
 1\. Download the UIEB dataset
 
 2\. Place it inside the src/data folder
 
 3\. Run Compare.py to get the numerical results of every model
+
+4\. Run Visualise_Results.py to get the visual results
 
