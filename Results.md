@@ -11,7 +11,7 @@ NOTE: The reference images in the dataset were created using Deep Learning based
 
 The Mean UIQM of raw images in the dataset is 0.9856293082993665
 
-1. ##### **Automatic White Balancing(max RGB) + Contrast Limited Adaptive Histogram Equalization:**
+##### 1\.  **Automatic White Balancing(max RGB) + Contrast Limited Adaptive Histogram Equalization:**
 
 &nbsp;    For CLAHE, the image was broken into 4\*4 non-overlapping blocks each blocks having 64\*64 pixels. The results:
 
@@ -22,8 +22,6 @@ The Mean UIQM of raw images in the dataset is 0.9856293082993665
 &nbsp;		Mean SSIM: 0.6596929965375062
 
 &nbsp;		Std SSIM: 0.13256120415080697
-
-&nbsp;		
 
 &nbsp;		Mean UIQM of output: 2.1898920166317897
 
@@ -41,13 +39,10 @@ The Mean UIQM of raw images in the dataset is 0.9856293082993665
 
 &nbsp;	Std SSIM: 0.02295188788138808
 
-&nbsp;	
-
 &nbsp;	Mean UIQM of output: 1.2913712992695061
 
 &nbsp;	Std UIQM of output: 0.5419831039570466
 
-##### 
 
 ##### 3\. Red channel compensated DCP:
 
@@ -75,8 +70,6 @@ The Mean UIQM of raw images in the dataset is 0.9856293082993665
 &nbsp;	Mean SSIM: 0.010397026153530846
 
 &nbsp;	Std SSIM: 0.022695533819141165
-
-&nbsp;	
 
 &nbsp;	Mean UIQM of output: 1.6995861964285832
 
