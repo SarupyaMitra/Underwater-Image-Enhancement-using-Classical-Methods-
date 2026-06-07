@@ -1,3 +1,4 @@
-*.png
 *.rar
 __pycache__/
+src/data/raw-890
+src/data/reference-890
