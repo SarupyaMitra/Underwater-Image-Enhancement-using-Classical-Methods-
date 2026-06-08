@@ -11,70 +11,15 @@ NOTE: The reference images in the dataset were created using Deep Learning based
 
 The Mean UIQM of raw images in the dataset is 0.9856293082993665
 
-#### 1\.  **Automatic White Balancing(max RGB) + Contrast Limited Adaptive Histogram Equalization:**
-
-&nbsp;    For CLAHE, the image was broken into 4\*4 non-overlapping blocks each blocks having 64\*64 pixels. The results:
-
-&nbsp;		Mean PSNR: 14.491193873872154
-
-&nbsp;		Std PSNR: 2.0849822476830884
-
-&nbsp;		Mean SSIM: 0.6596929965375062
-
-&nbsp;		Std SSIM: 0.13256120415080697
-
-&nbsp;		Mean UIQM of output: 2.1898920166317897
-
-&nbsp;		Std UIQM of output: 0.4448216635136627
+The detailed results:
 
 
-#### 2\. Basic Dark Channel Prior(DCP):
-
-
-&nbsp;	Mean PSNR: 6.0638328780235975
-
-&nbsp;	Std PSNR: 1.1356170919497688
-
-&nbsp;	Mean SSIM: 0.011151461206919226
-
-&nbsp;	Std SSIM: 0.02295188788138808
-
-&nbsp;	Mean UIQM of output: 1.2913712992695061
-
-&nbsp;	Std UIQM of output: 0.5419831039570466
-
-
-#### 3\. Red channel compensated DCP:
-
-&nbsp;	Mean PSNR: 6.061178886068516
-
-&nbsp;	Std PSNR: 1.135729736348809
-
-&nbsp;	Mean SSIM: 0.010828370775700634
-
-&nbsp;	Std SSIM: 0.022863174303680886
-
-&nbsp;	Mean UIQM of output: 1.393124910810237
-
-&nbsp;	Std UIQM of output: 0.5463559640663779
-
-
-
-#### 4\. Min Green-Blue DCP: 
-
-
-&nbsp;	Mean PSNR: 6.059335138146466
-
-&nbsp;	Std PSNR: 1.1351206865766215
-
-&nbsp;	Mean SSIM: 0.010397026153530846
-
-&nbsp;	Std SSIM: 0.022695533819141165
-
-&nbsp;	Mean UIQM of output: 1.6995861964285832
-
-&nbsp;	Std UIQM of output: 0.5171365096593712
-
+| Model | Mean PSNR  | Std PSNR | Mean SSIM | Std SSIM | Mean UIQM of output | Std UIQM of output |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| AWB + CLAHE | 14.491 | 2.084 | 0.659 | 0.132 | 2.189 | 0.444 |
+| Basic Dark Channel Prior(DCP) | 6.063 | 1.135 | 0.011 | 0.022 | 1.291 | 0.541 |
+| Red channel compensated DCP | 6.061 | 1.135 | 0.010 | 0.022 | 1.393 | 0.546 |
+| Min Green-Blue DCP | 6.059 | 1.135 | 0.010 | 0.022 | 1.699 | 0.517 |
 
 #### Interpretation:
 
